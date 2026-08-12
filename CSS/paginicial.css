@@ -173,46 +173,116 @@ a {
 }
 
 
-.top-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
 }
 
-.notification {
-    border: none;
-    background: white;
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #213555;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #3e5879;
+    padding-bottom: 8px;
+}
 
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 10px;
+}
+
+.card-tag.aviso {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.card-tag.evento {
+    background-color: #e0f2fe;
+    color: #0284c7;
+}
+
+.card-tag.biblioteca {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+.card-date {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.avatar{
     width: 38px;
     height: 38px;
-
-    border-radius: 8px;
-
-    position: relative;
-
-    cursor: pointer;
-}
-
-.notification b {
-    position: absolute;
-
-    right: -3px;
-    top: -3px;
-
-    background: #ed5362;
-
-    color: white;
-
-    width: 15px;
-    height: 15px;
-
     border-radius: 50%;
-
-    font-size: 8px;
-
+    background: #3867f2;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
 }
+
+
+
 
 
