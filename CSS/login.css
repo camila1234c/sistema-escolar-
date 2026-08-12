@@ -21,11 +21,9 @@ body {
 
 
 .login-info {
-    background: linear-gradient(
-        145deg,
-        #315de0,
-        #4775ef
-    );
+    background: linear-gradient(145deg,
+            #315de0,
+            #4775ef);
 
     color: white;
 
@@ -47,7 +45,7 @@ body {
     width: 48px;
     height: 48px;
 
-    background: rgba(255,255,255,0.18);
+    background: rgba(255, 255, 255, 0.18);
 
     border-radius: 13px;
 
@@ -80,7 +78,7 @@ body {
 .welcome-tag {
     display: inline-block;
 
-    background: rgba(255,255,255,.15);
+    background: rgba(255, 255, 255, .15);
 
     padding: 7px 12px;
 
@@ -143,7 +141,7 @@ body {
     width: 22px;
     height: 22px;
 
-    background: rgba(255,255,255,.16);
+    background: rgba(255, 255, 255, .16);
 
     border-radius: 50%;
 
@@ -230,7 +228,7 @@ body {
 
     background: #f5f7ff;
 
-    box-shadow: 0 3px 12px rgba(56,103,242,.08);
+    box-shadow: 0 3px 12px rgba(56, 103, 242, .08);
 }
 
 
@@ -369,11 +367,11 @@ body {
 .input-box:focus-within {
     border-color: #3867f2;
 
-    box-shadow: 0 0 0 3px rgba(56,103,242,.08);
+    box-shadow: 0 0 0 3px rgba(56, 103, 242, .08);
 }
 
 
-.input-box > span {
+.input-box>span {
     font-size: 13px;
 
     margin-right: 9px;
@@ -456,30 +454,23 @@ body {
     font-weight: 600;
 }
 
-
 .login-button {
     width: 100%;
-
     height: 45px;
-
     border: none;
-
     border-radius: 8px;
-
     background: #3867f2;
-
-    color: white;
-
-    font-family: inherit;
-
     font-size: 11px;
-
     font-weight: 600;
-
     cursor: pointer;
-
     transition: .2s;
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 
 .login-button:hover {
@@ -487,7 +478,7 @@ body {
 
     transform: translateY(-1px);
 
-    box-shadow: 0 5px 15px rgba(56,103,242,.2);
+    box-shadow: 0 5px 15px rgba(56, 103, 242, .2);
 }
 
 
@@ -515,6 +506,6 @@ body {
     font-weight: 600;
 
     margin-left: 4px;
+   
+    
 }
-
-
