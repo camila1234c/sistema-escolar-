@@ -1,25 +1,145 @@
 <!DOCTYPE html>
-<html lang="port-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pagina inicial</title>
+    <title>NexaEdu | Alunos</title>
     <link rel="stylesheet" href="../CSS/paginicial.css">
- </head>
+</head>
 
 <body>
-    <div class="fundo">
-   
-    <div class="card">
-        <img src="https://images.seeklogo.com/logo-png/63/1/colegio-civico-militar-do-parana-logo-png_seeklogo-631206.png" alt="logo">
-        <div class="card-conteudo">
-          <h2>Título do Card</h2>
-          <p>Este é um texto curto para explicar o conteúdo do seu card de forma bem simples.</p>
-          <a href="#" class="botao">Saiba mais</a>
-        </div>
-      </div>
-    </div>
-</body>
 
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">🎓</div>
+
+            <div>
+                <h2>EduClass</h2>
+            </div>
+        </div>
+
+
+        <a href="paginicial.html" class="menu">
+             <span>Início</span>
+        </a>
+
+        <a href="alunos.html" class="menu active">
+             <span>Alunos</span>
+        </a>
+
+        <a href="professores.html" class="menu">
+             <span>Professores</span>
+        </a>
+
+        <a href="turmas.html" class="menu">
+             <span>Turmas</span>
+        </a>
+
+        <a href="notas.html" class="menu">
+             <span>Notas</span>
+        </a>
+
+        <a href="frequencia.html" class="menu">
+             <span>Frequência</span>
+        </a>
+
+        <a href="comunicacao.html" class="menu">
+             <span>Comunicação</span>
+        </a>
+
+        <a href="biblioteca.html" class="menu">
+             <span>Biblioteca</span>
+        </a>
+
+        <a href="alimentacao.html" class="menu">
+             <span>cardapio</span>
+        </a>
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="menu">
+                ⚙️ <span>Configurações</span>
+            </a>
+
+            <a href="login.html" class="menu logout">
+                🚪 <span>Sair</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div class="search">
+                
+                <input
+                    type="text"
+                    placeholder="Pesquisar aluno...">
+            </div>
+
+            <div class="profile">
+
+                <div class="avatar">
+                    AD
+                </div>
+
+                <div>
+                    <strong>Administrador</strong>
+                    <small>Secretaria</small>
+                </div>
+
+            </div>
+
+        </header>
+
+        <main class="container">
+          <h2 class="section-title">Mural de Avisos e Notícias</h2>
+  
+          <div class="cards-grid">
+              <article class="card">
+                  <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500" alt="Retorno das Aulas">
+                  <div class="card-body">
+                      <span class="card-tag aviso">Aviso</span>
+                      <h3 class="card-title">Retorno das Aulas - 2º Semestre</h3>
+                      <p class="card-text">Daremos início ao novo bimestre escolar na próxima semana. Confira os horários
+                          e salas atualizados.</p>
+                      <span class="card-date">10/08/2026</span>
+                  </div>
+              </article>
+  
+              <article class="card">
+                  <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=500" alt="Feira de Ciências">
+                  <div class="card-body">
+                      <span class="card-tag evento">Evento</span>
+                      <h3 class="card-title">Inscrições para a Feira de Ciências</h3>
+                      <p class="card-text">Os grupos de alunos já podem inscrever seus projetos temáticos diretamente na
+                          coordenação.</p>
+                      <span class="card-date">08/08/2026</span>
+                  </div>
+              </article>
+  
+              <article class="card">
+                  <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=500" alt="Biblioteca">
+                  <div class="card-body">
+                      <span class="card-tag biblioteca">Biblioteca</span>
+                      <h3 class="card-title">Renovação do Acervo de Livros</h3>
+                      <p class="card-text">Foram adicionadas novas obras literárias e apostilas preparatórias para os
+                          exames deste ano.</p>
+                      <span class="card-date">05/08/2026</span>
+                  </div>
+              </article>
+          </div>
+      </main>
+  
+  
+
+</body>
 </html>
