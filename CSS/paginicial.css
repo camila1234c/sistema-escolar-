@@ -1,78 +1,218 @@
-body {
+* {
     margin: 0;
-    height: 100vh;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.fundo {
-    background-image: url("https://escolaweb.com.br/wp-content/uploads/2024/03/sua-escola-e-uma-empresa.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.6;
-    height: 100vh;
-    width: 100%;
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #202938;
 }
 
-.login-card {
-    background-color: #ffffff;
-    width: 90%;
-    max-width: 420px;
-    padding: 40px 30px;
-    border-radius: 25px;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    z-index: 10;
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 245px;
+    background: white;
+    border-right: 1px solid #e8ebf0;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    padding: 25px 15px;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .logo {
-    width: 120px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.title-cgm {
-    color: #000000;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 25px;
-    text-transform: lowercase;
-}
-
-.input-group {
-    position: relative;
-    margin-bottom: 20px;
     display: flex;
     align-items: center;
+    gap: 12px;
+
+    padding: 0 10px 25px;
+
+    border-bottom: 1px solid #edf0f4;
+
+    margin-bottom: 25px;
 }
 
-.input-field {
+.logo-icon {
+    width: 43px;
+    height: 43px;
+
+    border-radius: 12px;
+
+    background: #3867f2;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+}
+
+.logo h2 {
+    font-size: 17px;
+}
+
+.logo span {
+    color: #929aaa;
+    font-size: 9px;
+}
+
+
+.menu-title {
+    color: #a0a7b3;
+
+    font-size: 9px;
+    font-weight: bold;
+
+    margin: 0 10px 10px;
+}
+
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 11px 12px;
+
+    border-radius: 8px;
+
+    color: #687386;
+
+    font-size: 12px;
+
+    margin-bottom: 4px;
+
+    transition: .2s;
+}
+
+.menu:hover {
+    background: #f2f5ff;
+    color: #3867f2;
+}
+
+.menu.active {
+    background: #edf2ff;
+    color: #3867f2;
+    font-weight: bold;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.logout {
+    color: #e05260;
+}
+
+
+.main {
+    margin-left: 245px;
+
+    width: calc(100% - 245px);
+
+    padding: 25px 35px;
+}
+
+.topbar {
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.search {
+    width: 330px;
+    height: 39px;
+
+    background: white;
+
+    border: 1px solid #e4e7ed;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 12px;
+
+    gap: 8px;
+
+    color: #9ca4b2;
+}
+
+.search input {
     width: 100%;
-    padding: 15px 15px 15px 50px;
+
     border: none;
-    border-radius: 50px;
-    font-size: 16px;
-    color: #ffffff;
     outline: none;
-    background-color: #878080;
+
+    font-size: 11px;
 }
 
-.input-field::placeholder {
-    color: #ffffff;
+
+.top-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.btn-verificar {
-    width: 100%;
-    background-color: #126d38;
-    color: #ffffff;
+.notification {
     border: none;
-    padding: 14px;
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: 500;
+    background: white;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 8px;
+
+    position: relative;
+
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.517);
 }
 
-.btn-verificar:hover {
-    background-color: #1aa71e;
+.notification b {
+    position: absolute;
+
+    right: -3px;
+    top: -3px;
+
+    background: #ed5362;
+
+    color: white;
+
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    font-size: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+
