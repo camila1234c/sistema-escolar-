@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="port-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aluno</title>
+     <link rel="stylesheet" href="../CSS/alunos.css">
+</head>
+<body>
+     <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main">
+
+        <div class="container">
+
+            <!-- CADASTRO -->
+            <section class="section">
+
+                <h2>1. Cadastro de Aluno</h2>
+
+                <div class="form-grid">
+
+                    <div class="field">
+                        <label>Nome Completo</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="field">
+                        <label>CPF / RG</label>
+                        <input
+                            type="text"
+                            placeholder="000.000.000-00"
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label>Data de Nascimento</label>
+                        <input
+                            type="date"
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label>Endereço</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="field">
+                        <label>Telefone / E-mail</label>
+                        <input type="text">
+                    </div>
+
+
+                    <div class="field">
+                        <label>Responsáveis</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="field">
+                        <label>Turma / Série</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="field">
+                        <label>Matrícula</label>
+                        <input
+                            type="text"
+                            placeholder="Gerada automaticamente"
+                            disabled
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label>Situação</label>
+                        <select>
+                            <option>Ativo</option>
+                            <option>Inativo</option>
+                            <option>Transferido</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <button class="btn">
+                    Salvar Aluno
+                </button>
+
+            </section>
+
+
+            <!-- NOTAS -->
+            <section class="section">
+
+                <h3>4. Lançamento de Notas e Cálculo de Média</h3>
+
+                <div class="grades">
+
+                    <div class="grade-field">
+                        <label>Nota 1 (Provas)</label>
+                        <input
+                            type="number"
+                            min="0"
+                            max="10"
+                            step="0.1"
+                        >
+                    </div>
+
+                    <div class="grade-field">
+                        <label>Nota 2 (Trabalhos)</label>
+                        <input
+                            type="number"
+                            min="0"
+                            max="10"
+                            step="0.1"
+                        >
+                    </div>
+
+                </div>
+
+                <button class="btn" onclick="calcularMedia()">
+                    Calcular Situação
+                </button>
+
+            </section>
+
+
+            <!-- FREQUÊNCIA -->
+            <section class="section">
+
+                <h3>5. Controle de Frequência</h3>
+
+                <div class="frequency">
+
+                    <div class="frequency-field">
+                        <label>Aulas dadas</label>
+                        <input
+                            type="number"
+                            id="aulas"
+                            value="100"
+                        >
+                    </div>
+
+                    <div class="frequency-field">
+                        <label>Faltas do Aluno</label>
+                        <input
+                            type="number"
+                            id="faltas"
+                            value="20"
+                        >
+                    </div>
+
+                </div>
+
+                <button class="btn" onclick="verificarFrequencia()">
+                    Verificar Percentual
+                </button>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
