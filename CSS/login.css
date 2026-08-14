@@ -21,7 +21,9 @@ body {
 
 
 .login-info {
-    background: linear-gradient(145deg,#315de0,#4775ef);color: white;
+    background: linear-gradient(145deg,#315de0, #4775ef);
+
+    color: white;
 
     padding: 50px 70px;
 
@@ -41,7 +43,7 @@ body {
     width: 48px;
     height: 48px;
 
-    background: rgba(255, 255, 255, 0.18);
+    background: rgba(255,255,255,0.18);
 
     border-radius: 13px;
 
@@ -74,7 +76,7 @@ body {
 .welcome-tag {
     display: inline-block;
 
-    background: rgba(255, 255, 255, .15);
+    background: rgba(255,255,255,.15);
 
     padding: 7px 12px;
 
@@ -137,7 +139,7 @@ body {
     width: 22px;
     height: 22px;
 
-    background: rgba(255, 255, 255, .16);
+    background: rgba(255,255,255,.16);
 
     border-radius: 50%;
 
@@ -180,129 +182,6 @@ body {
     font-size: 12px;
 }
 
-
-
-.user-choice {
-    display: flex;
-    flex-direction: column;
-
-    gap: 10px;
-
-    margin-bottom: 27px;
-}
-
-
-.choice {
-    width: 100%;
-
-    background: white;
-
-    border: 1px solid #e3e7ef;
-
-    border-radius: 11px;
-
-    padding: 13px;
-
-    display: flex;
-    align-items: center;
-
-    text-align: left;
-
-    cursor: pointer;
-
-    transition: .2s;
-}
-
-
-.choice:hover {
-    border-color: #9bb1f5;
-}
-
-
-.choice.active {
-    border-color: #3867f2;
-
-    background: #f5f7ff;
-
-    box-shadow: 0 3px 12px rgba(56, 103, 242, .08);
-}
-
-
-.choice-icon {
-    width: 40px;
-    height: 40px;
-
-    background: #eaf0ff;
-
-    border-radius: 9px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 19px;
-
-    margin-right: 12px;
-}
-
-
-.choice-icon.professor {
-    background: #f1ebff;
-}
-
-
-.choice strong {
-    display: block;
-
-    font-size: 12px;
-
-    color: #293143;
-
-    margin-bottom: 3px;
-}
-
-
-.choice span {
-    font-size: 9px;
-
-    color: #929aaa;
-}
-
-
-.radio {
-    width: 17px;
-    height: 17px;
-
-    border: 2px solid #d3d8e1;
-
-    border-radius: 50%;
-
-    margin-left: auto;
-
-    position: relative;
-}
-
-
-.choice.active .radio {
-    border-color: #3867f2;
-}
-
-
-.choice.active .radio::after {
-    content: "";
-
-    width: 7px;
-    height: 7px;
-
-    background: #3867f2;
-
-    border-radius: 50%;
-
-    position: absolute;
-
-    top: 3px;
-    left: 3px;
-}
 
 
 .form-title {
@@ -363,11 +242,11 @@ body {
 .input-box:focus-within {
     border-color: #3867f2;
 
-    box-shadow: 0 0 0 3px rgba(56, 103, 242, .08);
+    box-shadow: 0 0 0 3px rgba(56,103,242,.08);
 }
 
 
-.input-box>span {
+.input-box > span {
     font-size: 13px;
 
     margin-right: 9px;
@@ -450,31 +329,24 @@ body {
     font-weight: 600;
 }
 
-.login-button {
-    width: 100%;
-    height: 45px;
-    border: none;
-    border-radius: 8px;
-    background: #3867f2;
-    font-size: 11px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: .2s;
-    text-decoration: none;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
+.login-button {
+   display: block;
+   width: 100%;
+   padding: 20px;
+   background-color: #0066cc;
+   color: white;
+   text-align: center;
+   text-decoration: none;
+   border-radius: 10px;
+   box-sizing: border-box;
+   cursor: pointer;
+}
 
 
 .login-button:hover {
     background: #2c55d4;
 
-    transform: translateY(-1px);
-
-    box-shadow: 0 5px 15px rgba(56, 103, 242, .2);
 }
 
 
@@ -502,6 +374,30 @@ body {
     font-weight: 600;
 
     margin-left: 4px;
-   
-    
 }
+
+.login-error {
+    display: none;
+    margin: 15px 0;
+    padding: 12px;
+    border-radius: 8px;
+
+    background-color: #ffe5e5;
+    color: #d93025;
+
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #ffb3b3;
+}
+
+.error-message {
+    display: block;
+    margin-top: 5px;
+    color: #d93025;
+    font-size: 13px;
+}
+
+.input-error {
+    border: 1px solid #d93025 !important;
+}
+
