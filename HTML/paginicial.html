@@ -1,62 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexaEdu | Alunos</title>
+
+    <title>EduClass - Início</title>
+
     <link rel="stylesheet" href="../CSS/paginicial.css">
+    
 </head>
 
 <body>
 
-<div class="layout">
+    <!-- MENU LATERAL -->
+    <aside class="sidebar" id="sidebar">
 
-    <aside class="sidebar">
-
-        <div class="logo">
-            <div class="logo-icon">🎓</div>
-
-            <div>
+            
+        <div class="logo">🎓<div>
                 <h2>EduClass</h2>
+                
             </div>
         </div>
 
+        <nav class="menu">
 
-        <a href="paginicial.html" class="menu active">
-             <span>Início</span>
-        </a>
+            <p class="menu-title">MENU PRINCIPAL</p>
 
-        <a href="alunos.html" class="menu">
-             <span>Alunos</span>
-        </a>
+            <a href="paginicial.html" class="menu-item active">
+                <i class="fa-solid fa-house"></i>
+                <span>Início</span>
+            </a>
 
-        <a href="professores.html" class="menu">
-             <span>Professores</span>
-        </a>
+            <a href="meusalunos.html" class="menu-item">
+                <i class="fa-solid fa-user-graduate"></i>
+                <span>Meus Alunos</span>
+            </a>
 
-        <a href="turmas.html" class="menu">
-             <span>Turmas</span>
-        </a>
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-users"></i>
+                <span>Minhas Turmas</span>
+            </a>
 
-        <a href="notas.html" class="menu">
-             <span>Notas</span>
-        </a>
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-clipboard-check"></i>
+                <span>Notas e Avaliações</span>
+            </a>
 
-        <a href="frequencia.html" class="menu">
-             <span>Frequência</span>
-        </a>
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Frequência</span>
+            </a>
 
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-book"></i>
+                <span>Disciplinas</span>
+            </a>
 
-        <a href="alimentacao.html" class="menu">
-             <span>cardapio</span>
-        </a>
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-user"></i>
+                <span>Meu Perfil</span>
+            </a>
 
+        </nav>
+
+        <!-- USUÁRIO -->
         <div class="sidebar-bottom">
 
+            <div class="user-sidebar">
+                <div class="user-avatar">L</div>
 
-            <a href="login.html" class="menu logout">
-                🚪 <span>Sair</span>
+                <div>
+                    <strong>Luís</strong>
+                    <span>Professor</span>
+                </div>
+            </div>
+
+            <a href="login.html" class="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Sair
             </a>
 
         </div>
@@ -64,72 +85,277 @@
     </aside>
 
 
-    <main class="main">
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main-content">
 
+        <!-- TOPO -->
         <header class="topbar">
 
-            <div class="search">
-                
-                <input
-                    type="text"
-                    placeholder="Pesquisar aluno...">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="page-title">
+                <h1>Início</h1>
+                <p>Bem-vindo de volta, professor Luís!</p>
             </div>
 
-            <div class="profile">
+            <div class="top-user">
 
-                <div class="avatar">
-                    AD
-                </div>
 
-                <div>
-                    <strong>Administrador</strong>
-                    <small>Secretaria</small>
+                <div class="user-top">
+                    <div class="avatar">L</div>
+
+                    <div>
+                        <strong>Luís</strong>
+                        <small>Professor</small>
+                    </div>
                 </div>
 
             </div>
 
         </header>
 
-        <main class="container">
-          <h2 class="section-title">Mural de Avisos e Notícias</h2>
-  
-          <div class="cards-grid">
-              <article class="card">
-                  <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500" alt="Retorno das Aulas">
-                  <div class="card-body">
-                      <span class="card-tag aviso">Aviso</span>
-                      <h3 class="card-title">Retorno das Aulas - 2º Semestre</h3>
-                      <p class="card-text">Daremos início ao novo bimestre escolar na próxima semana. Confira os horários
-                          e salas atualizados.</p>
-                      <span class="card-date">10/08/2026</span>
-                  </div>
-              </article>
-  
-              <article class="card">
-                  <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=500" alt="Feira de Ciências">
-                  <div class="card-body">
-                      <span class="card-tag evento">Evento</span>
-                      <h3 class="card-title">Inscrições para a Feira de Ciências</h3>
-                      <p class="card-text">Os grupos de alunos já podem inscrever seus projetos temáticos diretamente na
-                          coordenação.</p>
-                      <span class="card-date">08/08/2026</span>
-                  </div>
-              </article>
-  
-              <article class="card">
-                  <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=500" alt="Biblioteca">
-                  <div class="card-body">
-                      <span class="card-tag biblioteca">Biblioteca</span>
-                      <h3 class="card-title">Renovação do Acervo de Livros</h3>
-                      <p class="card-text">Foram adicionadas novas obras literárias e apostilas preparatórias para os
-                          exames deste ano.</p>
-                      <span class="card-date">05/08/2026</span>
-                  </div>
-              </article>
-          </div>
-      </main>
-  
-  
+
+        <!-- CONTEÚDO -->
+        <section class="dashboard">
+
+            <!-- BOAS-VINDAS -->
+            <div class="welcome-card">
+
+                <div>
+                   
+                    <h2>Olá, Luís! 👋</h2>
+                   
+                </div>
+
+               </div>
+
+            <section class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+
+                    <div class="stat-info">
+                        <span>Total de alunos</span>
+                        <strong>128</strong>
+                    
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div class="stat-info">
+                        <span>Minhas turmas</span>
+                        <strong>3</strong>
+                        <small>Turmas ativas</small>
+                    </div>
+
+                </div>
+
+                    <div class="stat-info">
+                        <span>Frequência média</span>
+                        <strong>91%</strong>
+                        <small>Das suas turmas</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="content-grid">
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h3>Minhas turmas</h3>
+                            <p>Turmas cadastradas no sistema</p>
+                        </div>
+
+                        <button class="see-all">
+                            Ver todas
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="classes">
+
+                        <div class="class-item">
+
+                            <div class="class-icon">
+                                <i class="fa-solid fa-people-group"></i>
+                            </div>
+
+                            <div class="class-info">
+                                <strong>2º Ano D</strong>
+                                <span>Banco de dados • 32 alunos</span>
+                            </div>
+
+                            <div class="class-grade">
+                                <strong>8,7</strong>
+                                <span>Média</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="class-item">
+
+                            <div class="class-icon">
+                                <i class="fa-solid fa-people-group"></i>
+                            </div>
+
+                            <div class="class-info">
+                                <strong>2º Ano D</strong>
+                                <span>Front-End • 30 alunos</span>
+                            </div>
+
+                            <div class="class-grade">
+                                <strong>8,2</strong>
+                                <span>Média</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="class-item">
+
+                            <div class="class-icon">
+                                <i class="fa-solid fa-people-group"></i>
+                            </div>
+
+                            <div class="class-info">
+                                <strong>3º Ano D</strong>
+                                <span>Back-End • 34 alunos</span>
+                            </div>
+
+                            <div class="class-grade">
+                                <strong>8,8</strong>
+                                <span>Média</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="class-item">
+
+                            <div class="class-icon">
+                                <i class="fa-solid fa-people-group"></i>
+                            </div>
+
+                            <div class="class-info">
+                                <strong>3º Ano D</strong>
+                                <span>Inglês • 32 alunos</span>
+                            </div>
+
+                            <div class="class-grade">
+                                <strong>8,1</strong>
+                                <span>Média</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRÓXIMAS ATIVIDADES -->
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h3>Próximas atividades</h3>
+                            <p>Atividades agendadas</p>
+                        </div>
+
+                        <button class="calendar-button">
+                            <i class="fa-regular fa-calendar"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="activities">
+
+                        <div class="activity">
+
+                            <div class="date">
+                                <strong>15</strong>
+                                <span>AGO</span>
+                            </div>
+
+                            <div class="activity-info">
+                                <strong>Prova de Biologia</strong>
+                                <span>2º Ano A • 08:00</span>
+                            </div>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+
+                        </div>
+
+
+                        <div class="activity">
+
+                            <div class="date">
+                                <strong>18</strong>
+                                <span>AGO</span>
+                            </div>
+
+                            <div class="activity-info">
+                                <strong>Entrega de trabalho</strong>
+                                <span>3º Ano D • 10:00</span>
+                            </div>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+
+                        </div>
+
+
+                        <div class="activity">
+
+                            <div class="date">
+                                <strong>23</strong>
+                                <span>AGO</span>
+                            </div>
+
+                            <div class="activity-info">
+                                <strong>Recuperação</strong>
+                                <span>2º Ano D • 13:30</span>
+                            </div>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+           
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
 
 </body>
 </html>
