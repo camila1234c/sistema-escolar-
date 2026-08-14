@@ -1,123 +1,51 @@
+const form = document.getElementById("loginForm");
 
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-        let tipoUsuario = "aluno";
+    const email = document.getElementById("email");
+    const senha = document.getElementById("senha");
 
+    const emailError = document.getElementById("emailError");
+    const senhaError = document.getElementById("senhaError");
 
-        function selecionarTipo(tipo) {
+   
+    emailError.textContent = "";
+    senhaError.textContent = "";
 
-            tipoUsuario = tipo;
+    let valido = true;
 
-            const btnAluno =
-                document.getElementById("btnAluno");
+   
+    if (email.value.trim() === "") {
+        emailError.textContent = "Preencha o campo de e-mail.";
+        valido = false;
+    }
 
-            const btnProfessor =
-                document.getElementById("btnProfessor");
+    
+    else if (!email.validity.valid) {
+        emailError.textContent = "Digite um e-mail válido, com @.";
+        valido = false;
+    }
 
-            const titulo =
-                document.getElementById("tituloLogin");
+    // Verifica senha vazia
+    if (senha.value.trim() === "") {
+        senhaError.textContent = "Preencha o campo de senha.";
+        valido = false;
+    }
 
-            const descricao =
-                document.getElementById("descricaoLogin");
+    // Verifica tamanho da senha
+    else if (senha.value.length < 6) {
+        senhaError.textContent = "A senha deve ter pelo menos 6 caracteres.";
+        valido = false;
+    }
 
-            const botao =
-                document.getElementById("loginButton");
+    else if (senha.value.length > 20) {
+        senhaError.textContent = "A senha deve ter no máximo 20 caracteres.";
+        valido = false;
+    }
 
-
-            btnAluno.classList.remove("active");
-
-            btnProfessor.classList.remove("active");
-
-
-            if (tipo === "aluno") {
-
-                btnAluno.classList.add("active");
-
-                titulo.innerText = "Login do aluno";
-
-                descricao.innerText =
-                    "Entre com seus dados para acessar sua área.";
-
-                botao.innerText =
-                    "Entrar como aluno";
-
-            } else {
-
-                btnProfessor.classList.add("active");
-
-                titulo.innerText = "Login do professor";
-
-                descricao.innerText =
-                    "Entre com seus dados para acessar sua área.";
-
-                botao.innerText =
-                    "Entrar como professor";
-
-            }
-
-        }
-
-
-        function mostrarSenha() {
-
-            const senha =
-                document.getElementById("senha");
-
-            if (senha.type === "password") {
-
-                senha.type = "text";
-
-            } else {
-
-                senha.type = "password";
-
-            }
-
-        }
-
-
-        document
-            .getElementById("loginForm")
-            .addEventListener("submit", function(event) {
-
-                event.preventDefault();
-
-                const email =
-                    document.getElementById("email").value;
-
-                const senha =
-                    document.getElementById("senha").value;
-
-
-                if (!email.includes("@")) {
-
-                    alert(
-                        "E-mail inválido! Digite um e-mail válido, como aluno@email.com"
-                    );
-
-                    return;
-
-                }
-
-
-                if (senha.length < 6) {
-
-                    alert(
-                        "A senha deve possuir pelo menos 6 caracteres."
-                    );
-
-                    return;
-
-                }
-
-
-                if (tipoUsuario === "aluno") {
-
-                    window.location.href = "index.html";
-
-                } else {
-
-                    window.location.href = "index.html";
-
-                }
-
-            });
+    // Se tudo estiver correto
+    if (valido) {
+        window.location.href = "paginicial.html";
+    }
+});
