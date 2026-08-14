@@ -1,164 +1,398 @@
 <!DOCTYPE html>
-<html lang="port-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aluno</title>
-     <link rel="stylesheet" href="../CSS/alunos.css">
+    <title>Meus Alunos - EduClass</title>
+
+    <link rel="stylesheet" href="../CSS/meusalunos.css">
 </head>
+
 <body>
-     <!-- CONTEÚDO PRINCIPAL -->
-    <main class="main">
 
-        <div class="container">
+    <div class="layout">
 
-            <!-- CADASTRO -->
-            <section class="section">
+       
+        <aside class="sidebar">
 
-                <h2>1. Cadastro de Aluno</h2>
-
-                <div class="form-grid">
-
-                    <div class="field">
-                        <label>Nome Completo</label>
-                        <input type="text">
-                    </div>
-
-                    <div class="field">
-                        <label>CPF / RG</label>
-                        <input
-                            type="text"
-                            placeholder="000.000.000-00"
-                        >
-                    </div>
-
-                    <div class="field">
-                        <label>Data de Nascimento</label>
-                        <input
-                            type="date"
-                        >
-                    </div>
-
-                    <div class="field">
-                        <label>Endereço</label>
-                        <input type="text">
-                    </div>
-
-                    <div class="field">
-                        <label>Telefone / E-mail</label>
-                        <input type="text">
-                    </div>
-
-
-                    <div class="field">
-                        <label>Responsáveis</label>
-                        <input type="text">
-                    </div>
-
-                    <div class="field">
-                        <label>Turma / Série</label>
-                        <input type="text">
-                    </div>
-
-                    <div class="field">
-                        <label>Matrícula</label>
-                        <input
-                            type="text"
-                            placeholder="Gerada automaticamente"
-                            disabled
-                        >
-                    </div>
-
-                    <div class="field">
-                        <label>Situação</label>
-                        <select>
-                            <option>Ativo</option>
-                            <option>Inativo</option>
-                            <option>Transferido</option>
-                        </select>
-                    </div>
-
-                </div>
-
-                <button class="btn">
-                    Salvar Aluno
-                </button>
-
-            </section>
-
-
-            <!-- NOTAS -->
-            <section class="section">
-
-                <h3>4. Lançamento de Notas e Cálculo de Média</h3>
-
-                <div class="grades">
-
-                    <div class="grade-field">
-                        <label>Nota 1 (Provas)</label>
-                        <input
-                            type="number"
-                            min="0"
-                            max="10"
-                            step="0.1"
-                        >
-                    </div>
-
-                    <div class="grade-field">
-                        <label>Nota 2 (Trabalhos)</label>
-                        <input
-                            type="number"
-                            min="0"
-                            max="10"
-                            step="0.1"
-                        >
-                    </div>
-
-                </div>
-
-                <button class="btn" onclick="calcularMedia()">
-                    Calcular Situação
-                </button>
-
-            </section>
-
-
-            <!-- FREQUÊNCIA -->
-            <section class="section">
-
-                <h3>5. Controle de Frequência</h3>
-
-                <div class="frequency">
-
-                    <div class="frequency-field">
-                        <label>Aulas dadas</label>
-                        <input
-                            type="number"
-                            id="aulas"
-                            value="100"
-                        >
-                    </div>
-
-                    <div class="frequency-field">
-                        <label>Faltas do Aluno</label>
-                        <input
-                            type="number"
-                            id="faltas"
-                            value="20"
-                        >
-                    </div>
-
-                </div>
-
-                <button class="btn" onclick="verificarFrequencia()">
-                    Verificar Percentual
-                </button>
-
-            </section>
-
+           <div class="logo">🎓<div>
+                <h2>EduClass</h2>
+                
+            </div>
         </div>
 
-    </main>
+           <nav class="menu">
+
+            <p class="menu-title">MENU PRINCIPAL</p>
+
+            <a href="paginicial.html" class="menu-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Início</span>
+            </a>
+
+            <a href="meusalunos.html" class="menu-item active">
+                <i class="fa-solid fa-user-graduate"></i>
+                <span>Meus Alunos</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-users"></i>
+                <span>Minhas Turmas</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-clipboard-check"></i>
+                <span>Notas e Avaliações</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Frequência</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-book"></i>
+                <span>Disciplinas</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i class="fa-solid fa-user"></i>
+                <span>Meu Perfil</span>
+            </a>
+
+        </nav>
+
+
+             <div class="sidebar-bottom">
+
+            <div class="user-sidebar">
+                <div class="user-avatar">L</div>
+
+                <div>
+                    <strong>Luís</strong>
+                    <span>Professor</span>
+                </div>
+            </div>
+
+               <a href="login.html" class="logout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Sair
+            </a>
+
+            </div>
+
+        </aside>
+
+
+       
+        <main class="main">
+
+            
+            <header class="topbar">
+
+                <div></div>
+
+                <div class="usuario">
+
+                   
+
+                    <div class="avatar pequeno">L</div>
+
+                    <div>
+                        <strong>Luis</strong>
+                        <small>Professor</small>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <section class="content">
+
+                <div class="page-header">
+
+                    <div>
+                        <h2>Meus Alunos</h2>
+                        <p>Consulte e acompanhe seus alunos.</p>
+                    </div>
+
+                </div>
+
+
+                <!-- TÍTULO DA TABELA -->
+                <div class="alunos-header">
+
+                    <div>
+                        <h3>Alunos cadastrados</h3>
+                        <p>Veja informações acadêmicas dos seus alunos.</p>
+                    </div>
+
+                    <button id="btnNovoAluno" class="btn-novo">
+                        <span>＋</span>
+                        Novo aluno
+                    </button>
+
+                </div>
+
+
+                <!-- FORMULÁRIO -->
+                <div id="formularioContainer" class="form-container">
+
+                    <div class="form-header">
+
+                        <div>
+                            <h3>Cadastrar novo aluno</h3>
+                            <p>Preencha as informações do aluno.</p>
+                        </div>
+
+                        <button id="btnFecharFormulario" class="btn-fechar">
+                            ×
+                        </button>
+
+                    </div>
+
+
+                    <form id="formAluno">
+
+                        <div class="form-grid">
+
+                            <div class="campo campo-grande">
+                                <label for="nome">
+                                    Nome completo <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nome"
+                                    placeholder="Digite o nome completo"
+                                >
+
+                                <small class="erro" id="erroNome"></small>
+                            </div>
+
+
+                            <div class="campo">
+                                <label for="matricula">
+                                    Matrícula <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="matricula"
+                                    placeholder="Ex: 2026110"
+                                >
+
+                                <small class="erro" id="erroMatricula"></small>
+                            </div>
+
+
+                            <div class="campo">
+                                <label for="turma">
+                                    Turma <span>*</span>
+                                </label>
+
+                                <select id="turma">
+                                    <option value="">Selecione a turma</option>
+                                    <option value="1º Ano A">1º Ano A</option>
+                                    <option value="1º Ano B">1º Ano B</option>
+                                    <option value="2º Ano A">2º Ano A</option>
+                                    <option value="2º Ano B">2º Ano B</option>
+                                    <option value="3º Ano A">3º Ano A</option>
+                                    <option value="3º Ano B">3º Ano B</option>
+                                </select>
+
+                                <small class="erro" id="erroTurma"></small>
+                            </div>
+
+
+                            <div class="campo">
+                                <label for="nascimento">
+                                    Data de nascimento <span>*</span>
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="nascimento"
+                                >
+
+                                <small class="erro" id="erroNascimento"></small>
+                            </div>
+
+
+                            <div class="campo">
+                                <label for="email">
+                                    E-mail
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    placeholder="aluno@email.com"
+                                >
+
+                                <small class="erro" id="erroEmail"></small>
+                            </div>
+
+
+                            <div class="campo">
+                                <label for="telefone">
+                                    Telefone
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="telefone"
+                                    placeholder="(00) 00000-0000"
+                                    maxlength="15"
+                                >
+                            </div>
+
+
+                            <div class="campo">
+                                <label for="media">
+                                    Média
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="media"
+                                    min="0"
+                                    max="10"
+                                    step="0.1"
+                                    placeholder="0,0 a 10,0"
+                                >
+
+                                <small class="erro" id="erroMedia"></small>
+                            </div>
+
+
+                            <div class="campo">
+                                <label for="frequencia">
+                                    Frequência (%)
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="frequencia"
+                                    min="0"
+                                    max="100"
+                                    step="1"
+                                    placeholder="0 a 100"
+                                >
+
+                                <small class="erro" id="erroFrequencia"></small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-acoes">
+
+                            <button
+                                type="button"
+                                id="btnCancelar"
+                                class="btn-cancelar"
+                            >
+                                Cancelar
+                            </button>
+
+                            <button
+                                type="submit"
+                                class="btn-salvar"
+                            >
+                                Salvar aluno
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+                <!-- AVISO -->
+                <div id="mensagem" class="mensagem"></div>
+
+
+                <!-- FILTROS -->
+                <div class="filtros">
+
+                    <div class="pesquisa">
+
+                        <span>⌕</span>
+
+                        <input
+                            type="text"
+                            id="pesquisa"
+                            placeholder="Pesquisar aluno..."
+                        >
+
+                    </div>
+
+
+                    <select id="filtroTurma">
+
+                        <option value="">Todas as turmas</option>
+                        <option value="1º Ano A">1º Ano A</option>
+                        <option value="1º Ano B">1º Ano B</option>
+                        <option value="2º Ano A">2º Ano A</option>
+                        <option value="2º Ano B">2º Ano B</option>
+                        <option value="3º Ano A">3º Ano A</option>
+                        <option value="3º Ano B">3º Ano B</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- TABELA -->
+                <div class="tabela-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Aluno</th>
+                                <th>Matrícula</th>
+                                <th>Turma</th>
+                                <th>Média</th>
+                                <th>Frequência</th>
+                                <th>Situação</th>
+                                <th>Ações</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="tabelaAlunos">
+                        </tbody>
+
+                    </table>
+
+
+                    <div id="semAlunos" class="sem-alunos">
+
+                        <div>👥</div>
+
+                        <h3>Nenhum aluno encontrado</h3>
+
+                        <p>
+                            Cadastre um novo aluno para começar.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="../JS/alunos.js"></script>
 
 </body>
 </html>
